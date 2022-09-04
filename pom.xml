@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.bbs.cmm</groupId>
+    <artifactId>bbs-cmm-contract</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <!-- Properties -->
+    <properties>
+        <!-- App -->
+        <!-- App - CMM -->
+        <app.bbs.cmm.version>1.0.0-SNAPSHOT</app.bbs.cmm.version>
+        <!-- Global -->
+        <!-- Global - Java -->
+        <java.version>1.8</java.version>
+        <!-- Global - GSON -->
+        <gson.version>2.8.9</gson.version>
+        <!-- Global - Lombok -->
+        <lombok.version>1.18.20</lombok.version>
+        <!-- Use -->
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+    </properties>
+
+    <!-- Management -->
+    <dependencyManagement>
+        <!-- Dependencies -->
+        <dependencies>
+            <!-- App -->
+            <!-- App - CMM -->
+            <dependency>
+                <groupId>com.bbs.cmm</groupId>
+                <artifactId>bbs-cmm</artifactId>
+                <version>${app.bbs.cmm.version}</version>
+            </dependency>
+            <!-- Global -->
+            <!-- Global - GSON -->
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson.version}</version>
+            </dependency>
+            <!-- Global - Lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- Dependencies -->
+    <dependencies>
+        <!-- App -->
+        <!-- App - CMM -->
+        <dependency>
+            <groupId>com.bbs.cmm</groupId>
+            <artifactId>bbs-cmm</artifactId>
+        </dependency>
+        <!-- Global -->
+        <!-- Global - GSON -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
+        <!-- Global - Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
+</project>
